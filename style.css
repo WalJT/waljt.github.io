@@ -1,6 +1,6 @@
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* font-size: 150%; */
+  font-family:  'Anta', Arial, sans-serif;
+  font-size: 125%;
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -8,6 +8,19 @@ body {
   color: #F5F5F5;
   background-color: #1F1F1F;
 }
+
+/* Headings */
+/* h1 {
+  font-family: 'Madimi One', Arial, sans-serif;
+}
+
+h2 {
+  font-family: 'Madimi One', Arial, sans-serif;
+}
+
+h3 {
+  font-family: 'Madimi One', Arial, sans-serif;
+} */
 
 /* links */
 a {
@@ -44,8 +57,8 @@ ul.card-list {
 }
 
 ul.card-list li {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* background-color: #1F1F1F; */
   border-radius: 10px;
   box-shadow: 0 10px 20px #000000;
