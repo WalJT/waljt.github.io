@@ -57,9 +57,9 @@ ul.card-list {
 ul.card-list li {
   /* display: flex;
   flex-direction: column; */
-  /* background-color: #1F1F1F; */
+  background-color: #1b1b1b;
   border-radius: 10px;
-  box-shadow: 0 10px 20px #000000;
+  box-shadow: 0 10px 10px #000000;
   padding: 1rem;
   margin: 1rem;
   /* width: 40%; */
