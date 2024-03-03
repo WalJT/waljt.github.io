@@ -11,23 +11,23 @@ body {
 
 /* links */
 a {
-  color: #eee;
+  color: #79BDFF;
   font-weight: 500;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #79BDFF;
   text-decoration: underline;
 }
 
 a:active {
-  color: #e5ffff;
+  color: #FF9933;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #d9faff;
+  color: #E0E0E0;
   text-decoration: none;
 }
 
