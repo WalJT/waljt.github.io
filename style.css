@@ -43,14 +43,15 @@ a:visited {
 }
 
 /* Data card list */
-
+/* Is this too much? */
 ul.card-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   /* flex-wrap: wrap; */
 }
 
@@ -62,5 +63,5 @@ ul.card-list li {
   box-shadow: 0 10px 10px #000000;
   padding: 1rem;
   margin: 1rem;
-  /* width: 40%; */
+  max-width: max-content;
 }
