@@ -78,3 +78,15 @@ a:visited {
   padding-right: 1rem;
 }
 
+/* Grid of recipe links */
+
+.food-grid{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.food-grid div {
+  box-shadow: 0 10px 10px #000000;
+  padding: 1em;
+}
