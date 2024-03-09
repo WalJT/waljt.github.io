@@ -43,10 +43,25 @@ a:visited {
 }
 
 /* Grid of book recommendations*/
+
 .books-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+}
+
+
+.books-grid .currently-reading {
+  grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+  .books-grid .currently-reading {
+    grid-column: span 1;
+  }
 }
 
 .books-grid div {
@@ -55,9 +70,6 @@ a:visited {
   padding-right: 1rem;
 }
 
-.books-grid .currently-reading {
-  grid-column: span 2;
-}
 
 /* Data card list */
 /* Is this too much? */
