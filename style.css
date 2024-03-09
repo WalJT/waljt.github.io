@@ -83,10 +83,11 @@ a:visited {
 .food-grid{
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .food-grid div {
   box-shadow: 0 10px 10px #000000;
   padding: 1em;
+  /* width: 6em; */
 }
