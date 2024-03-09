@@ -47,15 +47,23 @@ a:visited {
 .books-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 
 .books-grid .currently-reading {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 70em) and (min-width: 50em) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .books-grid .currently-reading {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 50em) {
   .books-grid {
     grid-template-columns: 1fr;
   }
