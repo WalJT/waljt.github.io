@@ -1,10 +1,7 @@
 :root {
   /* set commonly used colours */
-  @media (prefers-color-scheme: dark) {
-    --foreground: #F5F5F5;
-    --background: #1F1F1F;
-    
-  }
+  --foreground: #F5F5F5;
+  --background: #1F1F1F;  
 
   @media (prefers-color-scheme: light) {
     --foreground: #1F1F1F;
