@@ -1,7 +1,13 @@
 :root {
   /* set commonly used colours */
   --foreground: #F5F5F5;
-  --background: #1F1F1F
+  --background: #1F1F1F;  
+
+  @media (prefers-color-scheme: light) {
+    --foreground: #1F1F1F;
+    --background: #F5F5F5;
+  }
+
 }
 
 body {
@@ -40,6 +46,16 @@ a:active {
 a:visited {
   color: #bd7935;
   text-decoration: none;
+}
+
+@media (prefers-color-scheme: light) {
+  /* Minor modifications for light theme */
+  a, a:hover {
+    color: #bd5b00;
+  }
+  a:active {
+    color: #001d7a;
+  }
 }
 
 /* Grid of book recommendations*/
