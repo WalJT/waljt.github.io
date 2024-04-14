@@ -23,9 +23,11 @@ body {
 
 /* Navigation bar */
 
-nav {
+nav .selected {
   text-align: center;
-  border: #001d7a 1px solid;
+  /* border: #001d7a 1px solid; */
+  box-shadow: 0 10px 10px #000000;
+  
 }
 
 nav ul {
