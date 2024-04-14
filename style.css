@@ -2,10 +2,12 @@
   /* set commonly used colours */
   --foreground: #F5F5F5;
   --background: #1F1F1F;
+  --navbackground: #272626;
 
   @media (prefers-color-scheme: light) {
     --foreground: #1F1F1F;
     --background: #F5F5F5;
+    --navbackground: #d1d1d1;
   }
 
 }
@@ -23,11 +25,13 @@ body {
 
 /* Navigation bar */
 
+/* nav {
+  background-color: var(--foreground);
+} */
+
 nav .selected {
-  text-align: center;
-  /* border: #001d7a 1px solid; */
+  background-color: var(--background);
   box-shadow: 0 10px 10px #000000;
-  
 }
 
 nav ul {
@@ -36,10 +40,14 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: var(--navbackground);
 }
 
 nav ul li {
   float: left;
+  padding: 0;
+  margin: 0;
+  /* box-shadow: 0 10px 10px #000000; */
 }
 
 nav ul li a {
