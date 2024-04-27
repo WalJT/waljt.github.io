@@ -147,3 +147,10 @@ a:visited {
   padding: 1em;
   /* width: 6em; */
 }
+
+/* Recipe Text */
+
+.recipe {
+  text-align: justify;
+  border: #001d7a 2px solid;
+}
