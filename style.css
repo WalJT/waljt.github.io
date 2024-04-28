@@ -77,10 +77,10 @@ a:active {
   text-decoration: underline;
 }
 
-a:visited {
+/* a:visited {
   color: #bd7935;
   text-decoration: none;
-}
+} */
 
 @media (prefers-color-scheme: light) {
 
@@ -146,4 +146,16 @@ a:visited {
   box-shadow: 0 10px 10px #000000;
   padding: 1em;
   /* width: 6em; */
+}
+
+/* Recipe Content */
+
+.recipe {
+  text-align: justify;
+  align-self: center;
+  border-bottom: var(--foreground) 1px dashed;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 900px;
+  margin: auto;
 }
