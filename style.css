@@ -153,7 +153,7 @@ a:active {
 .recipe {
   text-align: justify;
   align-self: center;
-  border-bottom: var(--foreground) 1px dashed;
+  /* border-bottom: var(--foreground) 1px dashed; */
   padding-left: 15px;
   padding-right: 15px;
   max-width: 900px;
