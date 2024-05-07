@@ -168,5 +168,14 @@ footer {
   width: 100%;
   background-color: var(--navbackground);
   color: var(--foreground);
-  text-align: center;
+  display: flex;
+  /* text-align: center; */
 }
+
+/* .footleft {
+  text-align: left;
+}
+
+.footright {
+  text-align: right;
+} */
