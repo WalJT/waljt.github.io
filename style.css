@@ -163,6 +163,13 @@ a:active {
 
 /* Photographs */
 
+.photograph {
+  padding: 1rem;
+  border: 1px dashed;
+}
+
 .photograph img {
   max-width: 90%;
+  height: auto;
+  max-height: 90vh;
 }
