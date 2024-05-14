@@ -160,3 +160,9 @@ a:active {
   max-width: 900px;
   margin: auto;
 }
+
+/* Photographs */
+
+.photograph img {
+  max-width: 90%;
+}
