@@ -96,45 +96,6 @@ a:active {
   }
 }
 
-/* Grid of book recommendations*/
-
-.books-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-
-.books-grid .currently-reading {
-  grid-column: span 3;
-}
-
-@media (max-width: 70em) and (min-width: 50em) {
-  .books-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .books-grid .currently-reading {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 50em) {
-  .books-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .books-grid .currently-reading {
-    grid-column: span 1;
-  }
-}
-
-.books-grid div {
-  box-shadow: 0 10px 10px #000000;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 /* Grid of recipe links */
 
 .food-grid {
@@ -162,6 +123,17 @@ a:active {
 }
 
 /* Photographs */
+
+.photolayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 50em) {
+  .photolayout {
+    grid-template-columns: 1fr;
+  }
+}
 
 .photograph {
   padding: 1rem;
