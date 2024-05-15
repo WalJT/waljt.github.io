@@ -129,7 +129,7 @@ a:active {
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 70em) {
   .photolayout {
     grid-template-columns: 1fr;
   }
@@ -144,5 +144,5 @@ a:active {
   width: auto;
   max-width: 90%;
   height: auto;
-  max-height: 90vh;
+  /* max-height: 90vh; */
 }
