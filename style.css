@@ -137,7 +137,7 @@ a:active {
 
 .photograph {
   padding: 1rem;
-  border: 1px dashed;
+  /* border: 1px dashed; */
 }
 
 .twocolphoto {
@@ -147,6 +147,16 @@ a:active {
 @media (max-width: 70em) {
   .twocolphoto {
     grid-column: span 1;
+  }
+}
+
+.tworowphoto {
+  grid-row: span 2;
+}
+
+@media (max-width: 70em) {
+  .tworowphoto {
+    grid-row: span 1;
   }
 }
 
