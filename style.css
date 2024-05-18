@@ -140,9 +140,19 @@ a:active {
   border: 1px dashed;
 }
 
+.twocolphoto {
+  grid-column: span 2;
+}
+
+@media (max-width: 70em) {
+  .twocolphoto {
+    grid-column: span 1;
+  }
+}
+
 .photograph img {
   width: auto;
   max-width: 90%;
   height: auto;
-  /* max-height: 90vh; */
+  max-height: 80vh;
 }
