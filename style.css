@@ -144,3 +144,7 @@ a:active {
   max-height: 80vh;
   margin: 10px;
 }
+
+hr {
+  width: 50%;
+}
