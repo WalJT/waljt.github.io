@@ -124,45 +124,23 @@ a:active {
 
 /* Photographs */
 
-.photolayout {
+.photogrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-@media (max-width: 70em) {
-  .photolayout {
-    grid-template-columns: 1fr;
-  }
+.photo {
+  box-shadow: 0 10px 10px #000000;
+  padding: 1em;
+/*  overflow: hidden;*/
+/*  max-width: 95%;*/
 }
 
-.photograph {
-  padding: 1rem;
-  /* border: 1px dashed; */
-}
-
-.twocolphoto {
-  grid-column: span 2;
-}
-
-@media (max-width: 70em) {
-  .twocolphoto {
-    grid-column: span 1;
-  }
-}
-
-.tworowphoto {
-  grid-row: span 2;
-}
-
-@media (max-width: 70em) {
-  .tworowphoto {
-    grid-row: span 1;
-  }
-}
-
-.photograph img {
+.photo img {
   width: auto;
   max-width: 90%;
   height: auto;
   max-height: 80vh;
+  margin: 10px;
 }
