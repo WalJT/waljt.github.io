@@ -141,17 +141,19 @@ a:active {
   .photo  {
     /* width: 90%; */
     /* max-height: 20%; */
-    /* max-width: 80%; */
-    height: 65vh;
-    background: #EC985A;
-    color: white;
+    max-width: 80vw;
+    /* height: 65vh; */
+    /* background: #EC985A;
+    color: white; */
+    box-shadow: 0 10px 10px #000000;
     margin: 1rem;
     display: inline-block;
     text-align: center;
     flex: 1 0 auto;
     img {
       /* width: 90%; */
-      height: 90%;
+      max-height: 60vh;
+      max-width: 75vw;
     }
     /* max-width: 90%; */
     /* font-family: system-ui; */
