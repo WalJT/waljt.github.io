@@ -156,6 +156,10 @@ a:active {
       max-height: 60vh;
       max-width: 75vw;
     }
+    p {
+      text-align: center;
+      max-width: 75vw;
+    }
     /* max-width: 90%; */
     /* font-family: system-ui; */
     /* font-weight: 900; */
