@@ -124,30 +124,13 @@ a:active {
 
 /* Photographs */
 
-/* .photogrid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.photo {
-  box-shadow: 0 10px 10px #000000;
-  padding: 1em;
-} */
-
 .photogrid {
   display: flex;
   flex-wrap: wrap;
-  /* align-content: center; */
   .photo  {
-    /* width: 90%; */
-    /* max-height: 20%; */
-    /* max-width: 80vw; */
-    /* height: 65vh; */
-    /* background: #EC985A;
-    color: white; */
     box-shadow: 0 10px 10px #000000;
     margin: 1rem;
+    padding: 1rem;
     display: inline-block;
     text-align: center;
     flex: 1 0 auto;
@@ -160,20 +143,8 @@ a:active {
       text-align: center;
       max-width: 75vw;
     }
-    /* max-width: 90%; */
-    /* font-family: system-ui; */
-    /* font-weight: 900; */
-    /* font-size: 2rem; */
   } 
 }
-
-/* .photo img {
-  width: auto;
-  max-width: 90%;
-  height: auto;
-  max-height: 80vh;
-  margin: 10px;
-} */
 
 hr {
   width: 50%;
