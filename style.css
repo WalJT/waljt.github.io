@@ -142,7 +142,7 @@ a:active {
     }
     p {
       align-self: center;
-      max-width: 72vw;
+      /* max-width: 43vw; */
     }
   } 
 }
