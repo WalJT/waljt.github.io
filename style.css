@@ -138,10 +138,11 @@ a:active {
 .photogrid {
   display: flex;
   flex-wrap: wrap;
+  /* align-content: center; */
   .photo  {
     /* width: 90%; */
     /* max-height: 20%; */
-    max-width: 80vw;
+    /* max-width: 80vw; */
     /* height: 65vh; */
     /* background: #EC985A;
     color: white; */
