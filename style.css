@@ -21,6 +21,7 @@ body {
   margin-top: 4em;
   color: var(--foreground);
   background-color: var(--background);
+  /* max-width: 100vw; */
 }
 
 /* Navigation bar */
@@ -140,8 +141,8 @@ a:active {
       max-width: 75vw;
     }
     p {
-      text-align: center;
-      max-width: 75vw;
+      align-self: center;
+      max-width: 72vw;
     }
   } 
 }
