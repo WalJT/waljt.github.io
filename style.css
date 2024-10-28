@@ -128,23 +128,26 @@ a:active {
 .photogrid {
   display: flex;
   flex-wrap: wrap;
-  .photo  {
+
+  .photo {
     /* box-shadow: 0 10px 10px #000000; */
     margin: 1rem;
     padding: 1rem;
     display: inline-block;
     text-align: center;
     flex: 1 0 auto;
+
     img {
       /* width: 90%; */
       max-height: 60vh;
       max-width: 75vw;
     }
+
     p {
       align-self: center;
       /* max-width: 43vw; */
     }
-  } 
+  }
 }
 
 hr {
