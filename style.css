@@ -136,16 +136,17 @@ a:active {
     display: inline-block;
     text-align: center;
     flex: 1 0 auto;
+    max-width: 90vw;
 
     img {
       /* width: 90%; */
       max-height: 60vh;
-      max-width: 75vw;
+      max-width: 95%;
     }
 
     p {
-      align-self: center;
-      /* max-width: 43vw; */
+      text-align: center;
+      max-width: 95%;
     }
   }
 }
