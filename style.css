@@ -148,3 +148,7 @@ a:active {
 hr {
   width: 50%;
 }
+
+table {
+  margin: 0 auto;
+}
