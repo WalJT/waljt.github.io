@@ -20,8 +20,7 @@ body{
 .brand .logo{ width:32px; height:32px; position:relative; border-radius:6px; background:linear-gradient(135deg, #242a43 0%, #0e1325 70%); box-shadow: inset 0 0 16px rgba(97,160,255,.12); }
 .brand .word{ font-size:18px; }
 .tagline{ color: var(--muted); font-size:12px; opacity:.9; }
-.search{ margin-left:auto; display:flex; align-items:center; background:#0e1324; border:1px solid #242a43; border-radius:8px; padding:6px 10px; gap:8px; width: 420px; box-shadow: var(--shadow); }
-.search input{ flex:1; background:transparent; border:none; color:var(--ink); outline:none; font-size:14px; }
+
 .user{ display:flex; align-items:center; gap:12px; margin-left:16px; }
 .avatar{ width:28px; height:28px; border-radius:50%; background: linear-gradient(135deg, #39406b, #1a203a); border:1px solid #2a3258; box-shadow: var(--shadow); }
 .sidebar{ background:linear-gradient(180deg, #0e1324, #0b0f1c); border-right:1px solid #1e2440; padding:16px 12px; grid-area: sidebar; grid-column:1 / 2; }
@@ -67,7 +66,7 @@ body{
 @media (max-width:900px){
   .app{ grid-template-columns: 1fr; grid-template-rows: 64px 1fr; }
   .sidebar{ display:none; }
-  .search{ width:220px; }
+  /* .search width removed since search was removed from markup */
   /* Sidebar toggle button (mobile) */
   .menu-btn{ display:inline-flex; align-items:center; justify-content:center; background:transparent; border:1px solid transparent; color:var(--ink); padding:8px; border-radius:8px; font-size:18px; cursor:pointer; margin-right:8px; }
   /* When toggled, show sidebar as a fixed panel */
