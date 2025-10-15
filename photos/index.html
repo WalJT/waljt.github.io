@@ -36,20 +36,7 @@
 
     <div class="sidebar-overlay" id="sidebarOverlay" tabindex="-1"></div>
 
-    <script>
-      // Sidebar toggle for small screens
-      (function(){
-  var btn = document.querySelector('.menu-btn');
-  var app = document.querySelector('.app');
-  var overlay = document.getElementById('sidebarOverlay');
-  function open(){ app.classList.add('sidebar-open'); overlay.classList.add('visible'); if(btn) btn.setAttribute('aria-expanded','true'); }
-  function close(){ app.classList.remove('sidebar-open'); overlay.classList.remove('visible'); if(btn) btn.setAttribute('aria-expanded','false'); }
-  btn && btn.addEventListener('click', function(){ if(app.classList.contains('sidebar-open')) close(); else open(); });
-  overlay && overlay.addEventListener('click', close);
-  // close on Escape
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
-      })();
-    </script>
+    <script src="/scripts/ui.js" defer></script>
 
       <aside class="sidebar">
       <nav class="nav">
