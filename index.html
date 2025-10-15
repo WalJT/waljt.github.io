@@ -1,63 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Julian Tarquin Walsh</title>
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Madimi+One&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>Julian Tarquin Walsh</h1>
-  </header>
-  <main>
-    <p>
-    I'm an IT administrator by day, but beyond the world of tech, I have a bit of a photography obsession.
-    <br> This site is primarily intended to be a central point for my online activities, and you can find links to my various profiles below.
-    </p>
+  <div class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="word">Your Name</div>
+          <div class="tagline">A short, friendly tagline</div>
+        </div>
+      </div>
+      <div class="search" role="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm0 0" stroke="#9aa6cb" stroke-width="2" stroke-linecap="round"/><path d="M20 20l-4.2-4.2" stroke="#9aa6cb" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Search…" />
+      </div>
+      <div class="user">
+        <div class="pill">Personal Site</div>
+        <div class="avatar" title="You"></div>
+      </div>
+    </div>
 
-    <h2>Places where I can be found on the internet</h2>
+    <aside class="sidebar">
+      <nav class="nav">
+        <h4>Navigation</h4>
+        <a class="active" href="#home"><span>🏠</span> <span>Home</span></a>
+        <a href="#photos"><span>🖼️</span> <span>Photos</span></a>
+        <a href="#tech"><span>💻</span> <span>Tech Stuff</span></a>
+      </nav>
+    </aside>
 
-    <h3>Pixelfed</h3>
-    <p>
-      <a href="https://pixelfed.social/WalJT">@WalJT@pixefed.social</a>
-    </p>
+    <main class="content">
+      <section id="home" class="hero">
+        <div class="moon" aria-hidden="true"></div>
+        <div>
+          <h1>Welcome</h1>
+          <p>Hi — this is a simple personal home page template using a modern dark theme. Use this area to introduce yourself and link to important places.</p>
+        </div>
+      </section>
 
-    <h3>Flickr</h3>
-    <p>
-      <a href="https://www.flickr.com/photos/203230721@N03">https://www.flickr.com/photos/203230721@N03</a>
-    </p>
+      <div class="toolbar">
+        <button class="btn primary">Contact</button>
+        <button class="btn">Resume</button>
+        <button class="btn">Blog</button>
+      </div>
 
-    <h3>GitHub</h3>
-    <p>
-      <a href="https://github.com/waljt">github.com/WalJT</a>
-    </p>
-    <h3>LinkedIn</h3>
-    <p>
-      <a href="https://linkedin.com/in/waljt">linkedin.com/in/WalJT</a>
-    </p>
+      <section class="lib section" aria-label="About">
+        <div class="head">
+          <div class="title">About Me</div>
+        </div>
+        <div style="padding:14px;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+          <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam.</p>
+        </div>
+      </section>
 
-    <h2>Side Projects</h2>
+      <section id="photos" class="lib section" aria-label="Photos">
+        <div class="head">
+          <div class="title">Photos</div>
+        </div>
+        <div style="padding:14px; display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:12px;">
+          <div class="pill">Photo 1</div>
+          <div class="pill">Photo 2</div>
+          <div class="pill">Photo 3</div>
+          <div class="pill">Photo 4</div>
+        </div>
+      </section>
 
-    <h3>Lighthouses</h3>
-    <p>
-      I'm making an attempt to photograph every lighthouse on the island of Ireland.<br>
-      Check out my progress <a href="lighthouses.html">here</a>.
-    </p>
+      <section id="tech" class="lib section" aria-label="Tech Stuff">
+        <div class="head">
+          <div class="title">Tech Stuff</div>
+        </div>
+        <div style="padding:14px;">
+          <h3>Projects</h3>
+          <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+          <h3>Skills</h3>
+          <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.</p>
+        </div>
+      </section>
 
-  </main>
-  <footer>
-    <hr>
-    <p>&copy; 2025 Julian Tarquin Walsh.</p>
-    <hr>
-</footer>
+      <div class="footer">Personal template — styles separated to <code>styles.css</code>.</div>
+    </main>
+  </div>
 </body>
-
 </html>
