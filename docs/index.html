@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ScarePoint (parody) — Mock UI</title>
+<style>
+  :root{
+    --bg: #0f1320;
+    --panel: #181d2e;
+    --panel-2: #0f1424;
+    --ink: #e8ecf7;
+    --muted: #a7b0c4;
+    --accent: #ff7a1a; /* pumpkin */
+    --slime: #6BFF7A;
+    --danger: #ff5252;
+    --ok: #2ecc71;
+    --warning: #f5c542;
+    --shadow: 0 10px 30px rgba(0,0,0,.45);
+  }
+  html, body { height: 100%; }
+  body{
+    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink); background: radial-gradient(1200px 800px at 20% -10%, #1b2140 0%, #0c1020 60%, #070a14 100%), var(--bg);
+    overflow:hidden;
+  }
+  .app{ display:grid; grid-template-columns: 260px 1fr; grid-template-rows: 64px 1fr; height:100%; }
+  .topbar{ grid-column:1/3; display:flex; align-items:center; gap:16px; padding:0 20px; background: linear-gradient(90deg, #13182a, #1b2240); border-bottom:1px solid #242a43; position:relative; }
+  .brand{ display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px; }
+  .brand .logo{ width:32px; height:32px; position:relative; border-radius:6px; background:linear-gradient(135deg, #242a43 0%, #0e1325 70%); box-shadow: inset 0 0 16px rgba(255,122,26,.25); }
+  .brand .logo:before{ content:""; position:absolute; inset:3px; border-radius:5px; background: radial-gradient(12px 12px at 75% 30%, var(--accent) 0%, rgba(255,122,26,0) 60%), radial-gradient(8px 8px at 30% 70%, #6BFF7A 0%, rgba(107,255,122,0) 60%);
+  }
+  .brand .word{ font-size:18px; }
+  .tagline{ color: var(--muted); font-size:12px; opacity:.8; }
+  .search{ margin-left:auto; display:flex; align-items:center; background:#0e1324; border:1px solid #242a43; border-radius:8px; padding:6px 10px; gap:8px; width: 420px; box-shadow: var(--shadow);
+  }
+  .search input{ flex:1; background:transparent; border:none; color:var(--ink); outline:none; font-size:14px; }
+  .user{ display:flex; align-items:center; gap:12px; margin-left:16px; }
+  .avatar{ width:28px; height:28px; border-radius:50%; background: linear-gradient(135deg, #39406b, #1a203a); border:1px solid #2a3258; box-shadow: var(--shadow); }
+  .sidebar{ background:linear-gradient(180deg, #0e1324, #0b0f1c); border-right:1px solid #1e2440; padding:16px 12px; position:relative; }
+  .nav h4{ font-size:11px; letter-spacing:.12em; color:#94a0c2; opacity:.75; margin:20px 12px 8px; text-transform:uppercase; }
+  .nav a{ display:flex; align-items:center; gap:10px; color:#cfd6ea; text-decoration:none; padding:10px 12px; border-radius:8px; margin:2px 4px; }
+  .nav a:hover{ background: #151a30; }
+  .nav a.active{ background: linear-gradient(90deg, #161c36, #141a31); border:1px solid #222a4e; }
+  .content{ background: transparent; padding:18px 20px; overflow:auto; position:relative; }
+  .hero{ background: linear-gradient(135deg, rgba(255,122,26,.08), rgba(107,255,122,.06)); border:1px solid #252c4e; border-radius:14px; padding:16px; display:flex; align-items:center; gap:16px; box-shadow: var(--shadow);
+  }
+  .moon{ width:44px; height:44px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #f4f7ff, #cfd6ea 60%, #8d96b8 100%);
+    box-shadow: 0 0 24px rgba(255,255,255,.25);
+  }
+  .hero h1{ font-size:18px; margin:0; }
+  .hero p{ margin:2px 0 0; color:#aeb7d6; font-size:13px; }
+  .toolbar{ display:flex; align-items:center; gap:8px; margin:16px 0 10px; }
+  .btn{ background:#131831; border:1px solid #252c4e; color:#e8ecf7; padding:8px 10px; border-radius:8px; font-size:13px; }
+  .btn.primary{ background: linear-gradient(180deg, #ff8a3a, #ff6e00); border-color:#ff7a1a; color:#0d0f18; font-weight:700; }
+  .lib{ background: linear-gradient(180deg, #11162a, #0d1224); border:1px solid #242c50; border-radius:12px; box-shadow: var(--shadow); }
+  .lib .head{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #222a4e; }
+  .lib .title{ display:flex; align-items:center; gap:8px; font-weight:700; }
+  .lib table{ width:100%; border-collapse:collapse; font-size:14px; }
+  .lib th, .lib td{ padding:10px 12px; border-bottom:1px solid #1b2346; }
+  .lib th{ text-align:left; font-size:12px; color:#9aa6cb; letter-spacing:.04em; text-transform:uppercase; }
+  .lib tr:hover{ background:#121733; }
+  .namecell{ display:flex; align-items:center; gap:10px; }
+  .pill{ font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid #30406b; background:#0f152e; color:#b9c3e8; }
+  .status.cursed{ color:#ffb5b5; background: rgba(255, 82, 82, .08); border-color: rgba(255, 82, 82, .35); }
+  .status.blessed{ color:#bdf5c9; background: rgba(46, 204, 113, .08); border-color: rgba(46, 204, 113, .35); }
+  .status.pending{ color:#ffe5a6; background: rgba(245, 197, 66, .08); border-color: rgba(245, 197, 66, .35); }
+  .footer{ color:#7f8ab3; font-size:12px; margin-top:10px; opacity:.8; }
+  /* Decorative webs */
+  .web{ position:absolute; width:180px; height:180px; opacity:.15; }
+  .web.top-left{ top:70px; left:12px; }
+  .web.top-right{ top:70px; right:12px; transform: scaleX(-1); }
+  .bat{ position:absolute; width:36px; height:18px; opacity:.4; filter: drop-shadow(0 0 6px rgba(0,0,0,.6)); }
+  .bat.b1{ top: 20px; right: 220px; }
+  .bat.b2{ top: 120px; right: 120px; transform: scale(.9); }
+  .glow{ position:absolute; inset:auto auto 30px 30px; width:240px; height:240px; border-radius:50%; background: radial-gradient(circle, rgba(255,122,26,.18), rgba(255,122,26,0) 70%); filter: blur(6px); pointer-events:none; }
+  /* Simple inline file type badges */
+  .icon{ width:18px; height:18px; border-radius:4px; display:inline-grid; place-items:center; color:#0d0f18; font-weight:800; font-size:10px; }
+  .docx{ background:#61a0ff; }
+  .xlsx{ background:#4bd37b; }
+  .pptx{ background:#ff8a3a; }
+  .pdf{ background:#ff5252; }
+  .csv{ background:#3ddc97; }
+  .png{ background:#b084f5; }
+  .ps1{ background:#7aa2ff; }
+  .md{ background:#9ab0c9; }
+  .ghost{ width:16px; height:16px; display:inline-block; }
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="word">ScarePoint</div>
+          <div class="tagline">Where documents come back to life</div>
+        </div>
+      </div>
+      <div class="search" role="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm0 0" stroke="#9aa6cb" stroke-width="2" stroke-linecap="round"/><path d="M20 20l-4.2-4.2" stroke="#9aa6cb" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Search this haunted portal…" />
+      </div>
+      <div class="user">
+        <span class="pill">Beta – Parody UI</span>
+        <div class="avatar" title="J. Walsh"></div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <nav class="nav">
+        <h4>Navigation</h4>
+        <a class="active" href="#"><span>🏠</span> <span>Home</span></a>
+        <a href="#"><span>🗂️</span> <span>Sites</span></a>
+        <a href="#"><span>📄</span> <span>Document Library</span></a>
+        <a href="#"><span>🗓️</span> <span>Events</span></a>
+        <a href="#"><span>🛡️</span> <span>Policies</span></a>
+        <a href="#"><span>🧪</span> <span>Lab</span></a>
+
+        <h4>Seasonal</h4>
+        <a href="#"><span>🎃</span> <span>Pumpkin Projects</span></a>
+        <a href="#"><span>👻</span> <span>Ghost Registry</span></a>
+        <a href="#"><span>🦇</span> <span>Night Shift Rota</span></a>
+      </nav>
+
+      <!-- decorative webs -->
+      <svg class="web top-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 0 C 20 10, 40 20, 60 30" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M0 0 C 20 20, 40 40, 60 60" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M0 0 C 10 20, 20 40, 30 60" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M0 0 L 100 0 M0 0 L 0 100" stroke="#a7b0c4" stroke-width=".6"/>
+      </svg>
+    </aside>
+
+    <main class="content">
+      <div class="hero">
+        <div class="moon" aria-hidden="true"></div>
+        <div>
+          <h1>Welcome to ScarePoint</h1>
+          <p>Securely store, share, and resurrect your most chilling documents.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn primary">New</button>
+        <button class="btn">Upload</button>
+        <button class="btn">Share</button>
+        <button class="btn">…</button>
+      </div>
+
+      <section class="lib" aria-label="Document Library">
+        <div class="head">
+          <div class="title">📚 Spooky Document Library</div>
+          <div>
+            <span class="pill">Items: 9</span>
+          </div>
+        </div>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th style="width:46%">Name</th>
+              <th>Modified</th>
+              <th>Modified By</th>
+              <th>Version</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="namecell"><span class="icon docx">DOC</span> Haunted_Onboarding_Checklist.docx</td>
+              <td>Oct 13, 2025 23:59</td>
+              <td>J. Walsh</td>
+              <td>2.3</td>
+              <td><span class="pill status blessed">Blessed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon xlsx">XLS</span> Pumpkin_Patch_Rota.xlsx</td>
+              <td>Oct 11, 2025 18:06</td>
+              <td>B. Stoker</td>
+              <td>1.8</td>
+              <td><span class="pill status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon csv">CSV</span> Ghost_Sightings_2025.csv</td>
+              <td>Oct 10, 2025 02:13</td>
+              <td>V. Frankenstein</td>
+              <td>1.2</td>
+              <td><span class="pill status cursed">Cursed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon pdf">PDF</span> Ancient_Runbook.pdf</td>
+              <td>Oct 09, 2025 09:44</td>
+              <td>Ops Team</td>
+              <td>5.0</td>
+              <td><span class="pill status blessed">Blessed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon pptx">PPT</span> Midnight_Change_Request.pptx</td>
+              <td>Oct 08, 2025 22:00</td>
+              <td>Change Board</td>
+              <td>0.9</td>
+              <td><span class="pill status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon ps1">PS1</span> Nightly_Backup_Spell.ps1</td>
+              <td>Oct 07, 2025 03:33</td>
+              <td>Automation</td>
+              <td>3.6</td>
+              <td><span class="pill status blessed">Blessed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon png">PNG</span> Cobweb_Header_Graphic.png</td>
+              <td>Oct 06, 2025 15:27</td>
+              <td>Design</td>
+              <td>1.0</td>
+              <td><span class="pill status blessed">Blessed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon md">MD</span> ReadMe_FROM_THE_VOID.md</td>
+              <td>Oct 05, 2025 00:01</td>
+              <td>Unknown</td>
+              <td>0.1</td>
+              <td><span class="pill status cursed">Cursed</span></td>
+            </tr>
+            <tr>
+              <td class="namecell"><span class="icon xlsx">XLS</span> Candy_Budget_Tracker.xlsx</td>
+              <td>Oct 04, 2025 11:11</td>
+              <td>Finance</td>
+              <td>4.2</td>
+              <td><span class="pill status blessed">Blessed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="footer">Parody mock UI — not affiliated with or using Microsoft/SharePoint trademarks or UI elements. Demo only.</div>
+
+      <div class="glow" aria-hidden="true"></div>
+
+      <!-- decorative right web -->
+      <svg class="web top-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 0 C 80 10, 60 20, 40 30" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M100 0 C 80 20, 60 40, 40 60" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M100 0 C 90 20, 80 40, 70 60" stroke="#a7b0c4" stroke-width=".6" fill="none"/>
+        <path d="M100 0 L 0 0 M100 0 L 100 100" stroke="#a7b0c4" stroke-width=".6"/>
+      </svg>
+
+      <!-- bats -->
+      <svg class="bat b1" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 30 C 15 10, 35 10, 50 25 C 65 10, 85 10, 100 30 C 80 30, 60 40, 50 40 C 40 40, 20 30, 0 30 Z" fill="#cfd6ea"/>
+      </svg>
+      <svg class="bat b2" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 30 C 15 10, 35 10, 50 25 C 65 10, 85 10, 100 30 C 80 30, 60 40, 50 40 C 40 40, 20 30, 0 30 Z" fill="#cfd6ea"/>
+      </svg>
+
+    </main>
+  </div>
+</body>
+</html>
