@@ -7,11 +7,22 @@
   <link rel="stylesheet" href="/styles.css">
   <style>
     /* Simple styles specific to the photos page */
-    .photos-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px; }
+  /* Layout: use flex so cards can have intrinsic widths calculated from aspect-ratio */
+  .photos-grid{ display:flex; flex-wrap:wrap; gap:18px; align-items:flex-start; }
     .photo-card{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04)); border:1px solid rgba(255,255,255,0.02); border-radius:10px; overflow:hidden; }
-    /* 3:2 landscape ratio container */
-    .photo-rect{ width:100%; aspect-ratio:3/2; background:#222; display:block; }
-    .photo-caption{ padding:10px 12px; color:var(--muted); font-size:13px; }
+  /* Flexible ratio helpers for photo containers (use classes like .r-3-2, .r-4-3, .r-16-9, .r-1-1) */
+  /* photo-rect height is fixed; width is determined by aspect-ratio so container matches the photo */
+  .photo-rect{ height:var(--card-height,220px); background:#222; width:auto; }
+  /* Aspect-ratio helpers: use these when you want gradient placeholders sized to a ratio */
+  .photo-rect.dynamic{ aspect-ratio: auto; }
+  .photo-rect img{ width:100%; height:auto; display:block; }
+  .photo-rect.r-3-2{ aspect-ratio: 3/2; }
+  .photo-rect.r-1-1{ aspect-ratio: 1/1; }
+  .photo-rect.r-2-3{ aspect-ratio: 2/3; }
+  /* Center and size inner vertical figure so its height matches the square card.
+    For a 2:3 (width:height = 2/3) figure to reach the container height (which equals width),
+    width must be 2/3 (~66.6667%). Use flex centering on the square container. */
+  /* remove inner v-figure approach; outer rect aspect-ratio now matches contained photo */
     .photos-hero{ margin-bottom:14px; }
     a.back-link{ color:var(--accent); text-decoration:none; }
   </style>
@@ -56,49 +67,82 @@
         </div>
       </section>
 
-      <section class="lib section" aria-label="Gallery">
+      <!-- Landscapes section: 12x8 placeholders -->
+      <section class="lib section" aria-label="Landscapes">
         <div class="head">
-          <div class="title">Gallery</div>
+          <div class="title">Landscapes</div>
         </div>
         <div style="padding:14px;">
           <div class="photos-grid">
-            <!-- Six landscape slots (3:2) with captions -->
+            <!-- 8 landscape placeholders (12:8 / 3:2) -->
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#2b3354,#0f1424); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#6b8fd8,#2b4b8a); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo A — A short descriptive paragraph about this image. Lorem ipsum dolor sit amet.</div>
             </article>
-
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#31465a,#081224); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#7fb3d5,#2a6b99); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo B — A short descriptive paragraph about this image. Curabitur sodales ligula in libero.</div>
             </article>
-
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#3a2b44,#0a1020); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#8fb3a5,#2a8a63); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo C — A short descriptive paragraph about this image. Sed dignissim lacinia nunc.</div>
             </article>
-
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#25403b,#07121b); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#d59f6b,#8a5a2b); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo D — A short descriptive paragraph about this image. Pellentesque nibh. Aenean quam.</div>
             </article>
-
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#3b3058,#081424); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#b36bd5,#5a2b8a); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo E — A short descriptive paragraph about this image. Praesent libero. Sed cursus ante.</div>
             </article>
-
             <article class="photo-card">
-              <div class="photo-rect" style="background-image: linear-gradient(135deg,#2a3b60,#061126); background-size:cover; background-position:center;">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#6bd5b3,#2b997a); background-size:cover; background-position:center;">
               </div>
-              <div class="photo-caption">Photo F — A short descriptive paragraph about this image. Integer nec odio.</div>
             </article>
+            <article class="photo-card">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#d56b7f,#8a2b45); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-3-2" style="background-image: linear-gradient(135deg,#6bd0d5,#2b8a8a); background-size:cover; background-position:center;">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <!-- Portraits section: 1x1 placeholders (square) -->
+      <section class="lib section" aria-label="Portraits">
+        <div class="head">
+          <div class="title">Portraits</div>
+        </div>
+        <div style="padding:14px;">
+          <div class="photos-grid">
+            <!-- 6 portrait placeholders (1:1) -->
+            <article class="photo-card">
+              <div class="photo-rect r-1-1" style="background-image: linear-gradient(135deg,#6b8fd8,#2b4b8a); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-2-3" style="background-image: linear-gradient(180deg,#fff7e6,#ffd9b3); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-1-1" style="background-image: linear-gradient(135deg,#8fb3a5,#2a8a63); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-2-3" style="background-image: linear-gradient(180deg,#ffe6f2,#ffd6ea); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-1-1" style="background-image: linear-gradient(135deg,#b36bd5,#5a2b8a); background-size:cover; background-position:center;">
+              </div>
+            </article>
+            <article class="photo-card">
+              <div class="photo-rect r-1-1" style="background-image: linear-gradient(135deg,#6bd5b3,#2b997a); background-size:cover; background-position:center;">
+              </div>
+            </article>
           </div>
         </div>
       </section>
