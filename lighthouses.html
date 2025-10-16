@@ -11,25 +11,54 @@
             href="https://fonts.googleapis.com/css2?family=Anta&family=Madimi+One&display=swap"
             rel="stylesheet"
         />
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body>
-        <header>
-            <h1>Lighthouses</h1>
-        </header>
-        <main>
-            <p>
-                I'm making an attempt to photograph every lighthouse on the
-                island of Ireland. <br />
-                Check out the table below to see my progress.<br />
-                Data extracted from
-                <a href="https://en.wikipedia.org/wiki/List_of_lighthouses_in_Ireland" >Wikipedia</a>
-                on 2024-11-30.
-            </p>
+        <body>
+    <div class="app">
+        <div class="topbar">
+    <button class="menu-btn" type="button" aria-label="Toggle sidebar" aria-expanded="false" title="Toggle sidebar"></button>
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div>
+                    <div class="word">Your Name</div>
+                    <div class="tagline">A short, friendly tagline</div>
+                </div>
+            </div>
+      
+      
+        </div>
 
-            <table border="1" class="dataframe">
+        <div class="sidebar-overlay" id="sidebarOverlay" tabindex="-1"></div>
+
+        <script src="/scripts/ui.js" defer></script>
+
+            <aside class="sidebar">
+            <nav class="nav">
+                <h4>Navigation</h4>
+    <a href="/index.html"><span>🏠</span> <span>Home</span></a>
+    <a href="/photos.html"><span>📸</span> <span>Photos</span></a>
+    <a class="active" href="/lighthouses.html"><span>🗼</span> <span>Lighthouses</span></a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="hero">
+                <div class="hero-icon" aria-hidden="true">🗼</div>
+                <div>
+                    <h1>Lighthouses</h1>
+                    <p>I'm making an attempt to photograph every lighthouse on the island of Ireland. Check out the table below to see my progress. Data extracted from <a href="https://en.wikipedia.org/wiki/List_of_lighthouses_in_Ireland">Wikipedia</a> on 2024-11-30.</p>
+                </div>
+            </section>
+
+            <section class="lib section" aria-label="Lighthouses table">
+                <div class="head">
+                    <div class="title">Lighthouses</div>
+                    <div class="pill">Photographed</div>
+                </div>
+                <div style="padding:14px;">
+                    <table class="dataframe">
                 <thead>
                     <tr style="text-align: center">
                         <th>County</th>
@@ -685,7 +714,9 @@
                         <td>❌</td>
                     </tr>
                 </tbody>
-            </table>
+                    </table>
+                </div>
+            </section>
         </main>
         <footer>
             <hr />
