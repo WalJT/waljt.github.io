@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Photos | Julian Tarquin Walsh</title>
@@ -18,47 +17,15 @@
     }
 
     .photo-card {
+      height: 220px;
+      width: auto;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.04));
       border: 1px solid rgba(255, 255, 255, 0.02);
       border-radius: 10px;
       overflow: hidden;
-    }
-
-    /* Flexible ratio helpers for photo containers (use classes like .r-3-2, .r-4-3, .r-16-9, .r-1-1) */
-    /* photo-rect height is fixed; width is determined by aspect-ratio so container matches the photo */
-    .photo-rect {
-      height: var(--card-height, 220px);
-      background: #222;
-      width: auto;
-    }
-
-    /* Aspect-ratio helpers: use these when you want gradient placeholders sized to a ratio */
-    .photo-rect.dynamic {
       aspect-ratio: auto;
     }
 
-    .photo-rect img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .photo-rect.r-3-2 {
-      aspect-ratio: 3/2;
-    }
-
-    .photo-rect.r-1-1 {
-      aspect-ratio: 1/1;
-    }
-
-    .photo-rect.r-2-3 {
-      aspect-ratio: 2/3;
-    }
-
-    /* Center and size inner vertical figure so its height matches the square card.
-    For a 2:3 (width:height = 2/3) figure to reach the container height (which equals width),
-    width must be 2/3 (~66.6667%). Use flex centering on the square container. */
-    /* remove inner v-figure approach; outer rect aspect-ratio now matches contained photo */
     .photos-hero {
       margin-bottom: 14px;
     }
@@ -109,26 +76,26 @@
         </div>
         <div style="padding:14px;">
           <div class="photos-grid">
-            <article class="photo-card">
-              <img class="photo-rect r-2-3"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/ffe7c43a6-a8b5f2/WDO75fZhZG5B/ktsgT0oAnJrcPpxxaadHxOyYQtlkuPLZG6gTMUws.jpg"
-                alt="Wolf Supermoon, January" title="Wolf Supermoon, January">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-1-1"
-                src="https://pixelfed.social/storage/m/_v2/646434837349954060/fbedcc803-0ec729/6AX8G3HfrL4h/lP14SuVyVsSsvQWendqp3xEfZUhtxVM5mBM5nneO.jpg"
-                alt="Snow Moon, February" title="Snow Moon, February">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/a1431798c-70628a/FDZPbTqKMcAV/qEd4AMOWh1vvFVPgs7Y7v3DFIslFNOETuPT8hD8x.jpg"
-                alt="Worm Moon, March" title="Worm Moon, March">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/c4ShXw4WVZ9W/acTU7rENNN3HP60qt2FCGvJc4I9rYjoWUveDOG2T.jpg"
-                alt="Pink Moon, April" title="Pink Moon, April">
-            </article>
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/ffe7c43a6-a8b5f2/WDO75fZhZG5B/ktsgT0oAnJrcPpxxaadHxOyYQtlkuPLZG6gTMUws.jpg"
+              alt="Wolf Supermoon, January" title="Wolf Supermoon, January">
+
+
+            <img class="photo-card"
+              src="https://pixelfed.social/storage/m/_v2/646434837349954060/fbedcc803-0ec729/6AX8G3HfrL4h/lP14SuVyVsSsvQWendqp3xEfZUhtxVM5mBM5nneO.jpg"
+              alt="Snow Moon, February" title="Snow Moon, February">
+
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/a1431798c-70628a/FDZPbTqKMcAV/qEd4AMOWh1vvFVPgs7Y7v3DFIslFNOETuPT8hD8x.jpg"
+              alt="Worm Moon, March" title="Worm Moon, March">
+
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/c4ShXw4WVZ9W/acTU7rENNN3HP60qt2FCGvJc4I9rYjoWUveDOG2T.jpg"
+              alt="Pink Moon, April" title="Pink Moon, April">
+
           </div>
         </div>
       </section>
@@ -140,31 +107,28 @@
         </div>
         <div style="padding:14px;">
           <div class="photos-grid">
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/208209554-471e9e/8DiItKitncgm/PsgIbkQ6xzrSOizakig1jMD9B3FM1PfvinyVKJSp.jpg"
-                alt="Kish and Muglins lighthouses, Dublin" title="Kish and Muglins lighthouses, Dublin">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/9c67e908a-279c2f/RqgsaxS0Bxuh/MhGr28cKKt90Frb4RfhtD89XvHrmmO9fAgHth4hg.jpg"
-                alt="Howth Harbour, Dublin" title="Howth Harbour, Dublin">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect dynamic"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/33cc9b949-339791/2K14zahxMKu9/ZdZeXCzHKvSJS9JsxsnP5a7KeBKlpsrIWFgTMenP.jpg"
-                alt="Poolbeg, Dublin" title="Poolbeg, Dublin">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/V2RHEAme5QHs/CTAi2RECA88PUfQLM4QvFF9E9dFogexF2UYQpJpU.jpg"
-                alt="Balbriggan, Co. Dublin" title="Balbriggan, Co. Dublin">
-            </article>
-            <article class="photo-card">
-              <img class="photo-rect r-3-2"
-                src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/2Is0HmK08Rig/y71q6ZIggCQozzMOimJcOJ3Opusn7EIFWTFfXwQS.jpg"
-                alt="The Bailey, Howth" title="The Bailey, Howth">
-            </article>
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/208209554-471e9e/8DiItKitncgm/PsgIbkQ6xzrSOizakig1jMD9B3FM1PfvinyVKJSp.jpg"
+              alt="Kish and Muglins lighthouses, Dublin" title="Kish and Muglins lighthouses, Dublin">
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/9c67e908a-279c2f/RqgsaxS0Bxuh/MhGr28cKKt90Frb4RfhtD89XvHrmmO9fAgHth4hg.jpg"
+              alt="Howth Harbour, Dublin" title="Howth Harbour, Dublin">
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/33cc9b949-339791/2K14zahxMKu9/ZdZeXCzHKvSJS9JsxsnP5a7KeBKlpsrIWFgTMenP.jpg"
+              alt="Poolbeg, Dublin" title="Poolbeg, Dublin">
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/V2RHEAme5QHs/CTAi2RECA88PUfQLM4QvFF9E9dFogexF2UYQpJpU.jpg"
+              alt="Balbriggan, Co. Dublin" title="Balbriggan, Co. Dublin">
+
+
+            <img class="photo-card"
+              src="https://pxscdn.com/public/m/_v2/646434837349954060/31410d826-759a86/2Is0HmK08Rig/y71q6ZIggCQozzMOimJcOJ3Opusn7EIFWTFfXwQS.jpg"
+              alt="The Bailey, Howth" title="The Bailey, Howth">
+
           </div>
         </div>
       </section>
