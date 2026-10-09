@@ -16,6 +16,23 @@ body {
   background: radial-gradient(1200px 800px at 20% -10%, #1b2140 0%, #0c1020 60%, #070a14 100%), var(--bg);
 }
 
+h1 {
+  font-size: 20px;
+  border-bottom: 1px solid #222a4e;
+  padding: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  padding: 12px;
+}
+
+p {
+  font-size: 16px;
+  text-align: justify;
+  padding: 12px;
+}
+
 .app {
   display: grid;
   grid-template-columns: minmax(0, min(100%, 800px));
@@ -36,8 +53,14 @@ body {
   align-items: center;
   gap: 16px;
   box-shadow: var(--shadow);
+  font-size: 20px;
 }
 
+.hero div {
+  font-size: 24px;
+}
+
+/* TODO: Get rid of this and replace icon with photo */
 .hero-icon {
   display: inline-grid;
   place-items: center;
@@ -54,18 +77,6 @@ body {
   border-radius: 0;
 }
 
-/* The first tile has unique formattingto stand apart*/
-.hero h1 {
-  font-size: 18px;
-  margin: 10px;
-}
-
-.hero p {
-  margin: 2px 0 0;
-  color: #aeb7d6;
-  font-size: 13px;
-}
-
 /* Generic tile style
 * These are sections with class tile */
 .tile {
@@ -76,25 +87,6 @@ body {
   margin: 10px
 }
 
-.tile .head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 14px;
-  border-bottom: 1px solid #222a4e;
-}
-
-.tile .title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-}
-
-.tile p {
-  /* TODO: Justify font*/ 
-}
-
 .footer {
   color: #7f8ab3;
   font-size: 12px;
@@ -102,16 +94,16 @@ body {
   opacity: .8;
 }
 
-.icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  display: inline-grid;
-  place-items: center;
-  color: #0d0f18;
-  font-weight: 800;
-  font-size: 10px;
-}
+/* .icon { */
+/*   width: 18px; */
+/*   height: 18px; */
+/*   border-radius: 4px; */
+/*   display: inline-grid; */
+/*   place-items: center; */
+/*   color: #0d0f18; */
+/*   font-weight: 800; */
+/*   font-size: 10px; */
+/* } */
 
 .photos-grid {
   display: flex;
@@ -148,7 +140,7 @@ a:focus {
   text-decoration: underline dotted 1px;
 }
 
-a:active {
-  transform: translateY(1px);
-}
+/* a:active { */
+/*   transform: translateY(1px); */
+/* } */
 
