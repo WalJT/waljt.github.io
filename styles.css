@@ -1,7 +1,7 @@
 :root {
   --bg: #0f1320;
-  --panel: #181d2e;
-  --panel-2: #0f1424;
+  /* --panel: #181d2e; */
+  /* --panel-2: #0f1424; */
   --ink: #e8ecf7;
   --muted: #a7b0c4;
   --accent: #61a0ff;
@@ -91,6 +91,10 @@ body {
   font-weight: 700;
 }
 
+.tile p {
+  /* TODO: Justify font*/ 
+}
+
 .footer {
   color: #7f8ab3;
   font-size: 12px;
@@ -107,6 +111,25 @@ body {
   color: #0d0f18;
   font-weight: 800;
   font-size: 10px;
+}
+
+.photos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.photo-card {
+  height: auto;
+  width: auto;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: auto;
+  margin-left: 18px;
+  margin-right: 18px;
 }
 
 /* Themed link styles used across site */
