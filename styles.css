@@ -18,17 +18,13 @@ body {
 
 .app {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  grid-template-rows: 64px 1fr;
+  grid-template-columns: minmax(0, min(100%, 800px));
+  justify-content: center;
 }
 
 .content {
   background: transparent;
   padding: 18px 20px;
-  overflow: auto;
-  position: relative;
-  grid-area: content;
-  grid-column: 2 / 3;
 }
 
 .hero {
