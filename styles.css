@@ -53,29 +53,24 @@ p {
   align-items: center;
   gap: 16px;
   box-shadow: var(--shadow);
-  font-size: 20px;
-}
-
-.hero div {
   font-size: 24px;
 }
 
 /* TODO: Get rid of this and replace icon with photo */
-.hero-icon {
-  display: inline-grid;
-  place-items: center;
-  width: auto;
-  height: auto;
-  min-width: 44px;
-  min-height: 44px;
-  font-size: 28px;
-  /* larger emoji */
-  line-height: 1;
-  background: transparent;
-  /* remove circle */
-  box-shadow: none;
-  border-radius: 0;
-}
+
+/* .hero-icon { */
+/*   display: inline-grid; */
+/*   place-items: center; */
+/*   width: auto; */
+/*   height: auto; */
+/*   min-width: 44px; */
+/*   min-height: 44px; */
+/*   font-size: 28px; */
+/*   line-height: 1; */
+/*   background: transparent; */
+/*   box-shadow: none; */
+/*   border-radius: 0; */
+/* } */
 
 /* Generic tile style
 * These are sections with class tile */
