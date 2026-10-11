@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
-  background: radial-gradient(1200px 800px at 20% -10%, #1b2140 0%, #0c1020 60%, #070a14 100%), var(--bg);
+  background: var(--bg);
 }
 
 h1 {
@@ -103,18 +103,18 @@ p {
 .photos-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  /* gap: 18px; */
   align-items: flex-start;
 }
 
 .photo-card {
   height: auto;
   width: auto;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.04));
   border: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: 10px;
   overflow: hidden;
   aspect-ratio: auto;
+  margin-bottom: 18px;
   margin-left: 18px;
   margin-right: 18px;
 }
