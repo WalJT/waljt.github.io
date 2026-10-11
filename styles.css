@@ -1,9 +1,9 @@
 :root {
   --bg: #0f1320;
-  /* --panel: #181d2e; */
-  /* --panel-2: #0f1424; */
+  --gradient_start: #181d2e;
+  --gradient_end: var(--bg);
   --ink: #e8ecf7;
-  --muted: #a7b0c4;
+  --muted: #242c50;
   --accent: #61a0ff;
   /* soft blue accent */
   --shadow: 0 10px 30px rgba(0, 0, 0, .45);
@@ -11,14 +11,14 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   background: var(--bg);
 }
 
 h1 {
   font-size: 20px;
-  border-bottom: 1px solid #222a4e;
+  border-bottom: 1px solid var(--muted);
   padding: 12px;
 }
 
@@ -46,7 +46,7 @@ p {
 
 .hero {
   background: linear-gradient(135deg, rgba(97, 160, 255, .06), rgba(107, 255, 122, .02));
-  border: 1px solid #252c4e;
+  border: 1px solid var(--muted);
   border-radius: 14px;
   padding: 16px;
   display: flex;
@@ -56,54 +56,24 @@ p {
   font-size: 24px;
 }
 
-/* TODO: Get rid of this and replace icon with photo */
-
-/* .hero-icon { */
-/*   display: inline-grid; */
-/*   place-items: center; */
-/*   width: auto; */
-/*   height: auto; */
-/*   min-width: 44px; */
-/*   min-height: 44px; */
-/*   font-size: 28px; */
-/*   line-height: 1; */
-/*   background: transparent; */
-/*   box-shadow: none; */
-/*   border-radius: 0; */
-/* } */
-
 /* Generic tile style
 * These are sections with class tile */
 .tile {
-  background: linear-gradient(180deg, #11162a, #0d1224);
-  border: 1px solid #242c50;
+  background: linear-gradient(180deg, var(--gradient_start), var(--gradient_end));
+  border: 1px solid var(--muted);
   border-radius: 12px;
   box-shadow: var(--shadow);
   margin: 10px
 }
 
 .footer {
-  color: #7f8ab3;
   font-size: 12px;
   margin-top: 10px;
-  opacity: .8;
 }
-
-/* .icon { */
-/*   width: 18px; */
-/*   height: 18px; */
-/*   border-radius: 4px; */
-/*   display: inline-grid; */
-/*   place-items: center; */
-/*   color: #0d0f18; */
-/*   font-weight: 800; */
-/*   font-size: 10px; */
-/* } */
 
 .photos-grid {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 18px; */
   align-items: flex-start;
 }
 
