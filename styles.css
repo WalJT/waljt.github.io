@@ -19,18 +19,24 @@ body {
 h1 {
   font-size: 20px;
   border-bottom: 1px solid var(--muted);
-  padding: 12px;
+  margin-left: 18px;
+  margin-right: 18px;
+  padding-bottom: 8px;
 }
 
 h2 {
   font-size: 18px;
-  padding: 12px;
+  margin-left: 18px;
+  margin-right: 18px;
+  padding-bottom: 8px;
 }
 
 p {
   font-size: 16px;
   text-align: justify;
-  padding: 12px;
+  margin-left: 18px;
+  margin-right: 18px;
+  padding-bottom: 8px;
 }
 
 .app {
