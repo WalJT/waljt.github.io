@@ -87,7 +87,8 @@ p {
 .photos-grid {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo-card {
